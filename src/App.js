@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { AddCircle } from "@mui/icons-material";
+import { Button, Container, Typography } from "@mui/material";
+import { React } from "react";
+import { css } from "@emotion/react";
+¡
 function App() {
+  const buttonStyle = css({
+    backGround: "red",
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Button variant="contained" endIcon={<AddCircle />} style={buttonStyle}>
+        Add
+      </Button>
+
+      <hr />
+      <br />
+
+      <Typography variant="h4" color="textSecondary">
+        All my Todos
+      </Typography>
+
+
+    </Container>
   );
 }
 
